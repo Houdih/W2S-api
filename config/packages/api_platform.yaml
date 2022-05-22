@@ -1,5 +1,5 @@
 api_platform:
-    title: 'Blog W2S '
+    title: 'API W2S '
     description: 'A Symfony API to manage a simple blog app.'
     version: '1.0.0'
     mapping:
