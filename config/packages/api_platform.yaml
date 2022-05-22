@@ -1,5 +1,5 @@
 api_platform:
-    title: 'Blog W2S '
+    title: 'API W2S '
     description: 'A Symfony API to manage a simple blog app.'
     version: '1.0.0'
     mapping:
@@ -8,3 +8,7 @@ api_platform:
         json: ['application/merge-patch+json']
     swagger:
         versions: [3]
+        api_keys:
+          apiKey:
+            name: Authorization
+            type: header
