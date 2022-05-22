@@ -2,14 +2,11 @@
 
 namespace App\Entity;
 
-<<<<<<< HEAD
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
-=======
->>>>>>> ea079404d2f89a445cb2961773c240238d8a999a
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\Collection;
 use ApiPlatform\Core\Annotation\ApiResource;
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Component\Serializer\Annotation\Groups;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Serializer\Annotation\SerializedName;
@@ -30,11 +27,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      * 
-<<<<<<< HEAD
      * @Groups({"user:read", "article:read"})
-=======
-     * @Groups("user:read")
->>>>>>> ea079404d2f89a445cb2961773c240238d8a999a
      */
     private $id;
 
@@ -69,11 +62,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     /**
      * @ORM\Column(type="string", length=255)
      * 
-<<<<<<< HEAD
      * @Groups({"user:read", "user:write", "article:read"})
-=======
-     * @Groups({"user:read", "user:write"})
->>>>>>> ea079404d2f89a445cb2961773c240238d8a999a
      */
     private $username;
 
@@ -84,7 +73,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $name;
 
-<<<<<<< HEAD
     /**
      * @ORM\OneToMany(targetEntity=Article::class, mappedBy="author")
      * 
@@ -97,8 +85,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->articles = new ArrayCollection();
     }
 
-=======
->>>>>>> ea079404d2f89a445cb2961773c240238d8a999a
     public function getId(): ?int
     {
         return $this->id;
@@ -131,11 +117,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     public function getUsername(): string
     {
-<<<<<<< HEAD
         return (string) $this->username;
-=======
-        return (string) $this->email;
->>>>>>> ea079404d2f89a445cb2961773c240238d8a999a
     }
 
     /**
@@ -229,7 +211,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
         return $this;
     }
-<<<<<<< HEAD
 
     /**
      * @return Collection<int, Article>
@@ -265,6 +246,4 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         return in_array($roles, $this->roles);
     }
-=======
->>>>>>> ea079404d2f89a445cb2961773c240238d8a999a
 }
